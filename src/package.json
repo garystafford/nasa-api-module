@@ -1,0 +1,34 @@
+{
+  "name": "nasa-api-module",
+  "version": "1.0.0",
+  "description": "NASA API Module",
+  "main": "index.js",
+  "scripts": {
+    "test-syntax": "standard --verbose",
+    "test-lint": "./node_modules/.bin/eslint *.js",
+    "test-integration": "sh ../test/tests.sh",
+    "test": "npm run test-syntax && npm run test-lint",
+    "clean-up": "standard --fix --verbose; ./node_modules/.bin/eslint --fix --debug *.js",
+    "sonarqube": "sonar-scanner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garystafford/nasa-api-module"
+  },
+  "author": "Gary A. Stafford",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ntl": "^1.2.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
