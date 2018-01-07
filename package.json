@@ -6,10 +6,10 @@
   "scripts": {
     "test-syntax": "standard --verbose",
     "test-lint": "./node_modules/.bin/eslint *.js",
+    "test-sonar": "sonar-scanner",
     "test-integration": "sh ../test/tests.sh",
-    "test": "npm run test-syntax && npm run test-lint",
-    "clean-up": "standard --fix --verbose; ./node_modules/.bin/eslint --fix --debug *.js",
-    "sonarqube": "sonar-scanner"
+    "test": "npm run test-syntax && npm run test-lint && npm run test-sonar",
+    "clean-up": "standard --fix --verbose; ./node_modules/.bin/eslint --fix --debug *.js"
   },
   "publishConfig": {
     "registry": "http://localhost:8081/repository/npm-hosted/"
