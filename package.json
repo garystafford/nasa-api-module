@@ -11,6 +11,9 @@
     "clean-up": "standard --fix --verbose; ./node_modules/.bin/eslint --fix --debug *.js",
     "sonarqube": "sonar-scanner"
   },
+  "publishConfig": {
+    "registry": "http://localhost:8081/repository/npm-hosted/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/garystafford/nasa-api-module"
