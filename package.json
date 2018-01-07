@@ -1,6 +1,6 @@
 {
   "name": "nasa-api-module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NASA API Module",
   "main": "index.js",
   "scripts": {
