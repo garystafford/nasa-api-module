@@ -47,5 +47,5 @@ git push --tags
 
 # publish
 npm login --registry=http://localhost:8081/repository/npm-group
-npm publish --registry http://localhost:8081/repository/npm-hosted
+npm publish # registry is in package.json
 ```
