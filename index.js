@@ -2,7 +2,7 @@
 
 const rp = require('request-promise');
 const configClient = require('./lib/cacheClient');
-const config = configClient.loadConfigs(['DEMO_KEY'], 30000);
+const config = configClient.loadConfigs(['DEMO_KEY']);
 
 module.exports = {
     // Common method to make requests
@@ -31,7 +31,7 @@ module.exports = {
             },
             json: true
         };
-
+        console.log(`config.DEMO_KEY: ${config.DEMO_KEY}`);
         this.makeRequest(options, callback)
     },
 
@@ -48,7 +48,7 @@ module.exports = {
             },
             json: true
         };
-
+        console.log(`config.DEMO_KEY: ${config.DEMO_KEY}`);
         this.makeRequest(options, callback)
     }
 };
