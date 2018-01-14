@@ -32,7 +32,6 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "co": "^4.6.0",
-    "nasa-api-module": "^1.0.6",
     "aws-sdk": "^2.181.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
