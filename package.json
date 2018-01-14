@@ -1,14 +1,15 @@
 {
   "name": "nasa-api-module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NASA API Module",
   "main": "index.js",
   "scripts": {
+    "start": "ntl",
     "test-syntax": "standard --verbose",
     "test-lint": "./node_modules/.bin/eslint *.js",
     "test-sonar": "sonar-scanner",
     "test-integration": "sh ./tests.sh",
-    "test": "npm run test-syntax && npm run test-lint && npm run test-sonar",
+    "test": "npm run test-syntax && npm run test-lint",
     "clean-up": "standard --fix --verbose; ./node_modules/.bin/eslint --fix --debug *.js"
   },
   "publishConfig": {
@@ -33,7 +34,6 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "co": "^4.6.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
