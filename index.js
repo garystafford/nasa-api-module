@@ -3,9 +3,14 @@
 const rp = require('request-promise');
 const configClient = require('./lib/cacheClient');
 const config = configClient.loadConfigs(['DEMO_KEY', 'DEMO_KEY_ENCRYPTED']);
+let params = new Map();
 
-let p = new Promise((resolve) => {
-    resolve(config.DEMO_KEY_ENCRYPTED)
+let getParams = co(function* () {
+    params = new Map([
+        ['DEMO_KEY', yield config.DEMO_KEY],
+        ['DEMO_KEY_ENCRYPTED', yield config.DEMO_KEY_ENCRYPTED]
+    ]);
+    return yield Promise.resolve();
 });
 
 function makeRequest(options, callback) {
@@ -21,18 +26,14 @@ function makeRequest(options, callback) {
 }
 
 module.exports = {
-    // Common method to make requests
-
     // Astronomy Picture of the Day API (APOD)
     // https://api.nasa.gov/api.html#apod
     getAstronomyPicOfDay: function (callback) {
-        new Promise((resolve) => {
-            resolve(config.DEMO_KEY_ENCRYPTED)
-        }).then((value) => {
+        getParams.then(() => {
             let options = {
                 uri: 'https://api.nasa.gov/planetary/apod',
                 qs: {
-                    'api_key': value
+                    'api_key': params.get('DEMO_KEY_ENCRYPTED')
                 },
                 headers: {
                     'User-Agent': 'Request-Promise'
@@ -46,13 +47,11 @@ module.exports = {
     // DSCOVR's Earth Polychromatic Imaging Camera (EPIC)
     // https://api.nasa.gov/api.html#neows-swagger
     getEpic: function (callback) {
-        new Promise((resolve) => {
-            resolve(config.DEMO_KEY_ENCRYPTED)
-        }).then((value) => {
+        getParams.then(() => {
             let options = {
                 uri: 'https://api.nasa.gov/EPIC/api/natural/images',
                 qs: {
-                    'api_key': value
+                    'api_key': params.get('DEMO_KEY_ENCRYPTED')
                 },
                 headers: {
                     'User-Agent': 'Request-Promise'
