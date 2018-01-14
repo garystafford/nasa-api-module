@@ -28,9 +28,12 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "ntl": "^1.2.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "aws-sdk": "^2.97.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "co": "^4.6.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
