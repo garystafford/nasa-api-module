@@ -1,5 +1,6 @@
 'use strict';
 
+const co = require('co');
 const rp = require('request-promise');
 const configClient = require('./lib/cacheClient');
 const config = configClient.loadConfigs(['DEMO_KEY', 'DEMO_KEY_ENCRYPTED']);
