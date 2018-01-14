@@ -1,6 +1,6 @@
 {
   "name": "nasa-api-module",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "NASA API Module",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "Gary A. Stafford",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.14.0",
+    "eslint": "^4.15.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
@@ -30,8 +30,10 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
+    "co": "^4.6.0",
+    "nasa-api-module": "^1.0.6",
     "aws-sdk": "^2.181.0",
-    "bluebird": "^3.5.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   }
