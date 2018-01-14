@@ -3,10 +3,14 @@
 ## Usage
 Add to `package.json`
 
+```bash
+npm install nasa-api-module
+```
+
 ```text
 {
   "dependencies": {
-    "nasa-api-module": "^1.0.3"
+    "nasa-api-module": "^1.0.19"
   }
 }
 ```
@@ -33,7 +37,7 @@ Update `package.json`
 
 ```json
 {
-  "version": "1.0.3"
+  "version": "1.0.19"
 }
 ```
 
@@ -42,10 +46,14 @@ Update `package.json`
 git add -A && git commit -m "Updating release version" && git push
 
 # tag
-git tag -a 1.0.3 -m "1.0.3"
+git tag -a 1.0.19 -m "1.0.19"
 git push --tags
 
 # publish
 npm login --registry=http://localhost:8081/repository/npm-group
 npm publish # registry is in package.json
 ```
+
+## AWS Parameter Store
+
+Modules uses `cacheClient.js` from [theburningmonk/lambda-config-demo](https://github.com/theburningmonk/lambda-config-demo) GitHub repo, to access my personal NASA API Key from my AWS [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html). My AWS Region is currently hard-coded in `cacheClient.js`, to hack around the following error: `ConfigError: Missing region in config AWS`.
