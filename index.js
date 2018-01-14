@@ -24,7 +24,7 @@ module.exports = {
         let options = {
             uri: 'https://api.nasa.gov/planetary/apod',
             qs: {
-                'api_key': config.DEMO_KEY || `${process.env.DEMO_KEY}`
+                'api_key': config.DEMO_KEY
             },
             headers: {
                 'User-Agent': 'Request-Promise'
@@ -41,7 +41,7 @@ module.exports = {
         let options = {
             uri: 'https://api.nasa.gov/EPIC/api/natural/images',
             qs: {
-                'api_key': config.DEMO_KEY || `${process.env.DEMO_KEY}`
+                'api_key': config.DEMO_KEY
             },
             headers: {
                 'User-Agent': 'Request-Promise'
