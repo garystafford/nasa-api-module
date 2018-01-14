@@ -1,7 +1,10 @@
 # NASA API Request Module
 
 ## Usage
+
 Add to `package.json`
+
+To install module from your private npm repository
 
 ```bash
 npm install nasa-api-module
@@ -11,6 +14,16 @@ npm install nasa-api-module
 {
   "dependencies": {
     "nasa-api-module": "^1.0.19"
+  }
+}
+```
+
+To install module from GitHub
+
+```text
+{
+  "dependencies": {
+         "nasa-api-module": "github:garystafford/nasa-api-module#semver:1.0.19"
   }
 }
 ```
@@ -25,7 +38,7 @@ return new Promise((resolve, reject) => {
         if (err) {
             return reject(err)
         }
-        
+
         return resolve(body)
     })
 })
@@ -51,7 +64,7 @@ git push --tags
 
 # publish
 npm login --registry=http://localhost:8081/repository/npm-group
-npm publish # registry is in package.json
+npm publish # my registry is hard-coded in package.json
 ```
 
 ## AWS Parameter Store
