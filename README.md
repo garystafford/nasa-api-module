@@ -25,7 +25,7 @@ To install module from GitHub
 ```text
 {
   "dependencies": {
-         "nasa-api-module": "github:garystafford/nasa-api-module#semver:1.0.19"
+    "nasa-api-module": "github:garystafford/nasa-api-module#semver:1.0.19"
   }
 }
 ```
@@ -40,7 +40,7 @@ return new Promise((resolve, reject) => {
         if (err) {
             return reject(err)
         }
-
+    
         return resolve(body)
     })
 })
