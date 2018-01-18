@@ -1,6 +1,8 @@
 # NASA API Request Module
 
-Re-usable Node.js Module, used to access NASA's public APIs, and used for an upcoming AWS Serverless API article. Requires your own personal [NASA API Key](https://api.nasa.gov/index.html#apply-for-an-api-key).
+Node.js Module to access NASA's public APIs.
+
+Requires your own personal [NASA API Key](https://api.nasa.gov/index.html#apply-for-an-api-key).
 
 ## Usage
 
@@ -20,7 +22,7 @@ npm install nasa-api-module
 }
 ```
 
-To install module from GitHub
+To install module from the existing GitHub project
 
 ```text
 {
@@ -40,7 +42,7 @@ return new Promise((resolve, reject) => {
         if (err) {
             return reject(err)
         }
-    
+
         return resolve(body)
     })
 })
