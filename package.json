@@ -1,6 +1,6 @@
 {
   "name": "nasa-api-module",
-  "version": "1.0.19",
+  "version": "1.1.0",
   "description": "NASA API Module",
   "main": "index.js",
   "scripts": {
@@ -32,8 +32,8 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "co": "^4.6.0",
-    "aws-sdk": "^2.181.0",
+    "aws-sdk": "^2.183.0",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise-native": "^1.0.5"
   }
 }
